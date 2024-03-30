@@ -86,7 +86,6 @@ const contagemRegressiva = () => {
     return
   }
   tempoDecorridoEmSegundos -= 1
-    // console.log('Temporizador: ' + tempoDecorridoEmSegundos)
   mostrarTempo()
 }
 
@@ -124,12 +123,14 @@ if (focoBt.classList.contains('active')) {
   
 
 }else if (curtoBt.classList.contains('active')) {
+  pauseTemp.play()
   tempoDecorridoEmSegundos = time_02
   alterarContexto('descanso-curto')
   curtoBt.classList.add('active')
   zerar()
 
 }else if (longoBt.classList.contains('active')) {
+  pauseTemp.play()
   tempoDecorridoEmSegundos = time_03
   alterarContexto('descanso-longo')
   longoBt.classList.add('active')
